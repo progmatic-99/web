@@ -1,0 +1,17 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif; }
+
+.logo img {
+  max-width: 80px; }
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8rem;
+  margin: 2rem 0 0 2rem; }

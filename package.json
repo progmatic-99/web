@@ -1,0 +1,22 @@
+{
+  "name": "sona-web",
+  "version": "1.0.0",
+  "description": "Sona Electrosolutions",
+  "main": "index.html",
+  "scripts": {
+    "sass": "node-sass -w sass/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progmatic-99/web.git"
+  },
+  "author": "progmatic99",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/progmatic-99/web/issues"
+  },
+  "homepage": "https://github.com/progmatic-99/web#readme",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
+}
