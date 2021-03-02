@@ -1,0 +1,40 @@
+// Smartphones
+@include mediaSm {
+  nav {
+    .nav-menu {
+      display: none;
+      min-height: 100vh;
+      min-width: 100vh;
+      z-index: 1000;
+      &.show {
+        position: absolute;
+        top: 120px;
+        display: flex;
+        flex-direction: column;
+        @include easeOut(height);
+        .nav-item {
+          position: inherit;
+        }
+      }
+    }
+  }
+
+  .burger {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+// Tablets & Small Laptops
+@include mediaMd {
+  @include navWidth;
+}
+
+@include mediaLg {
+  @include navWidth;
+  @include slideImgHeight;
+}
+
+@include mediaXl {
+  @include slideImgHeight;
+}

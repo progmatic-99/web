@@ -1,21 +1,71 @@
+@import "config";
+@import "nav";
+
 * {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
+  background-color: $bg-color;
 }
 
 body {
   font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
 }
 
-.logo img {
-  max-width: 80px;
+a {
+  text-decoration: none;
+  outline: 0;
+  cursor: pointer;
 }
 
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8rem;
-  margin: 2rem 0 0 2rem;
+li {
+  list-style: none;
 }
+
+[data-component="slideshow"] .slide {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
+
+#slide-images {
+  .slide {
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    object-position: center;
+    img {
+      width: 100%;
+      display: block;
+      @include fade($num: 4, $fade: 5, $visible: 0);
+    }
+  }
+}
+
+.circles {
+  position: absolute;
+  text-align: center;
+  left: 0;
+  right: 0;
+  // bottom: -8px;
+  margin-top: 3em;
+
+  .circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: $primary;
+    display: inline-block;
+    margin: 0 8px;
+    position: relative;
+
+    &.highlight {
+      background-color: $link-bg;
+    }
+  }
+}
+
+@import "mobile";

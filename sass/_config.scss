@@ -1,0 +1,84 @@
+$bg-color: rgb(26, 23, 23);
+$link-bg: #f1574f;
+$primary: rgb(240, 229, 229);
+
+@mixin easeOut($property: transform) {
+  transition: $property 0.7s ease-out;
+}
+
+@mixin navWidth {
+  nav {
+    .nav-menu {
+      width: 60%;
+    }
+  }
+}
+
+@mixin slideImgHeight {
+  #slide-images {
+    .slide {
+      img {
+        height: 450px;
+      }
+    }
+  }
+}
+
+@mixin fade($num: 1, $fade: 1, $visible: 2) {
+  $a: 100 / (($fade + $visible) * $num);
+  @keyframes fade {
+    0% {
+      opacity: 0;
+    }
+    #{$a * $fade}% {
+      opacity: 1;
+    }
+    #{$a * ($fade + $visible)}% {
+      opacity: 1;
+    }
+    #{$a * ($fade + $visible + $fade)}% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  animation-name: fade;
+  animation-duration: (($fade + $visible) * $num) + s;
+  animation-iteration-count: infinite;
+
+  @for $i from 1 through $num {
+    &:nth-child(#{$i}) {
+      animation-delay: (#{($fade + $visible) * ($i - 1)}) + s;
+    }
+  }
+}
+
+@mixin mediaSm {
+  // width cannot be more than 500px
+  @media screen and (max-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  // width cannot be more than 768px
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin mediaLg {
+  // width cannot be less than 769px
+  @media screen and (min-width: 769px) and (max-width: 1170px) {
+    @content;
+  }
+}
+
+@mixin mediaXl {
+  // width cannot be less than 1171px
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

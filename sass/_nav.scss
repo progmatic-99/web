@@ -1,0 +1,68 @@
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8rem;
+
+  .logo {
+    background-color: $bg-color;
+    img {
+      max-width: 60px;
+    }
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-around;
+    width: 45%;
+    font-weight: 600;
+    text-transform: uppercase;
+
+    .nav-item {
+      &.active > a {
+        color: $link-bg;
+      }
+      .nav-link {
+        color: $primary;
+        letter-spacing: 2px;
+        font-size: 18px;
+
+        &:hover {
+          color: $link-bg;
+        }
+      }
+    }
+  }
+}
+
+.burger {
+  display: none;
+  div {
+    width: 25px;
+    height: 3px;
+    margin: 5px;
+    background-color: $primary;
+  }
+
+  // Rotate into X with menu lines
+  &.close {
+    transform: rotate(180deg);
+
+    .line {
+      // Line 1 - Rotate
+      &:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+
+      // Line 2 - Hide
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      // Line 3 - Rotate
+      &:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+}
