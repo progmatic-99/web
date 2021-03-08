@@ -1,34 +1,97 @@
 nav {
   display: flex;
-  justify-content: space-around;
   align-items: center;
-  min-height: 8rem;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  padding: 20px 48px !important;
+  position: relative;
+  // z-index: 1000;
 
   .logo {
+    display: inline-block;
     background-color: $bg-color;
     img {
-      max-width: 60px;
+      max-height: 55px;
     }
   }
-
-  .nav-menu {
+  .nav-container {
     display: flex;
-    justify-content: space-around;
-    width: 45%;
-    font-weight: 600;
-    text-transform: uppercase;
+    flex-basis: auto;
+    justify-content: flex-end;
+    padding-bottom: 0 !important;
+    flex-grow: 1;
+    align-items: center;
 
-    .nav-item {
-      &.active > a {
-        color: $link-bg;
-      }
-      .nav-link {
-        color: $primary;
-        letter-spacing: 2px;
-        font-size: 18px;
+    .nav-menu {
+      flex-direction: row;
+      display: flex;
+      justify-content: space-around;
+      min-width: 75%;
+      font-weight: 600;
+      align-items: center;
+      text-transform: uppercase;
+      // position: relative;
 
-        &:hover {
+      .nav-item {
+        &.products {
+          padding-bottom: 0.3rem;
+        }
+        &.active > a {
+          color: $link-bg !important;
+        }
+
+        a {
+          .material-icons {
+            &.show {
+              transform: rotate(-180deg);
+              transition: transform 0.25s linear 0s;
+            }
+          }
+        }
+
+        a:focus {
           color: $link-bg;
+          .material-icons {
+            color: $link-bg !important;
+          }
+        }
+        .nav-link {
+          color: $primary;
+          font-size: 17px;
+          letter-spacing: 0.5px;
+
+          &:hover {
+            color: $link-bg;
+            .material-icons {
+              color: $link-bg !important;
+            }
+          }
+        }
+      }
+      .transformer-dropdown {
+        display: none;
+        &.show {
+          @include parentDropdown;
+          border: 0 !important;
+
+          .transformer-item {
+            @include childDropdown;
+            @include dropHover;
+          }
+        }
+      }
+
+      .led-dropdown {
+        display: none;
+        &.show {
+          @include parentDropdown;
+          border: 0 !important;
+
+          .led-item {
+            @include childDropdown;
+            min-width: 26.5rem;
+            @include dropHover;
+          }
         }
       }
     }
@@ -42,8 +105,10 @@ nav {
     height: 3px;
     margin: 5px;
     background-color: $primary;
+    &:hover {
+      color: $link-bg;
+    }
   }
-
   // Rotate into X with menu lines
   &.close {
     transform: rotate(180deg);

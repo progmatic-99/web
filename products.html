@@ -10,33 +10,252 @@
     <link rel="icon" href="dist/images/sona-trans.png" />
     <title>Sona Electrosolutions</title>
     <link rel="stylesheet" href="dist/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/7b15d2d2ab.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
-    <nav>
+    <nav class="nav-bar">
       <div class="logo">
         <a href="index.html">
-          <img src="dist/images/sona-trans.png" alt="sona-logo" />
+          <img
+            src="dist/images/sona-trans.png"
+            alt="sona-electrosolutions-logo"
+          />
         </a>
       </div>
-      <ul class="nav-menu">
-        <li class="nav-item">
-          <a class="nav-link" href="index.html"> Home </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html"> About </a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="products.html"> Products </a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="contact.html"> Contact Us </a>
-        </li>
-      </ul>
+      <div class="nav-container">
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html"> Home </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html"> About </a>
+          </li>
+          <li class="nav-item products">
+            <a
+              class="nav-link"
+              id="dropdown-three"
+              href="#"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Sona LED
+              <i class="fas fa-angle-down material-icons md-led"></i>
+            </a>
+            <div class="led-dropdown" aria-labelledby="dropdown-three">
+              <a href="products.html/#" class="led-item">LED DECO LIGHT 0.5W</a>
+              <a href="products.html/#" class="led-item"
+                >SONA CANDLE BULBS (VIVID SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >LED BULB 180 DEGREE (AL BODY) (ILLUMINITE SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >EMERGENCY LED BULB (MOONLIT SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >SONA HIGH WATTAGE BULBS (ALLURE SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >SONA LED CONCEALED/DOWNLIGHT (MARVEL SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >SONA LED TUBELIGHT/BATTEN (RELUCENT SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >SONA SLIM PANELS (GLISTEN SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >SONA SURFACE PANELS (LUMIN SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >SONA SPOTLIGHTS (IMPERIAL SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >SONA T-BULB (GLARE SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >SONA O-BULB (DAZZLE SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >SONA STREET LIGHTS (EMINENT SERIES)</a
+              >
+              <a href="products.html/#" class="led-item"
+                >SONA ENTICE STRIP LIGHT</a
+              >
+            </div>
+          </li>
+          <li class="nav-item products">
+            <a
+              class="nav-link"
+              id="dropdown-one"
+              href="#"
+              role="button"
+              data-toggle="dropdown"
+              aria-haspopup="true"
+              aria-expanded="false"
+            >
+              Transformers<br />
+              & Coils
+              <i class="fas fa-angle-down material-icons md-trans"></i>
+            </a>
+            <div class="transformer-dropdown" aria-labelledby="dropdown-one">
+              <a href="products.html/#" class="transformer-item">EE SERIES</a>
+              <a href="products.html/#" class="transformer-item">EER SERIES</a>
+              <a href="products.html/#" class="transformer-item">ETD SERIES</a>
+              <a href="products.html/#" class="transformer-item">EFD SERIES</a>
+              <a href="products.html/#" class="transformer-item">EC SERIES</a>
+              <a href="products.html/#" class="transformer-item">PQ SERIES</a>
+              <a href="products.html/#" class="transformer-item">EDR SERIES</a>
+              <a href="products.html/#" class="transformer-item">RM SERIES</a>
+              <a href="products.html/#" class="transformer-item">EPC SERIES</a>
+              <a href="products.html/#" class="transformer-item"
+                >LINE FILTERS</a
+              >
+              <a href="products.html/#" class="transformer-item"
+                >TOROIDAL COILS</a
+              >
+              <a href="products.html/#" class="transformer-item"
+                >DRUM COIL AND BIT COILS</a
+              >
+            </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html"> Contact Us </a>
+          </li>
+        </ul>
+      </div>
       <div class="burger">
         <div class="line"></div>
         <div class="line"></div>
         <div class="line"></div>
       </div>
     </nav>
+    <div class="led-contain">
+      <div class="led-prodcuts"></div>
+    </div>
+    <div>
+      <footer>
+        <div class="make">
+          <div class="make-contain">
+            <img src="dist/images/lion.png" alt="Make in India" />
+          </div>
+        </div>
+        <div class="line-container">
+          <div class="row">
+            <div class="footer-line"></div>
+          </div>
+        </div>
+        <div class="contact-icons">
+          <div class="contain-icons">
+            <div class="social-icons1">
+              <div class="contain1">
+                <div class="mr-4">
+                  <a
+                    href="https://www.facebook.com/Sona-Electrosolutions-1898365870488130/"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="Visit our Facebook page."
+                  >
+                    <i class="fab fa-2x fa-facebook"></i>
+                  </a>
+                </div>
+                <div class="mr-4">
+                  <a
+                    href="https://api.whatsapp.com/send?phone=919810875229"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="WhatsApp Mr K.K. Sharma"
+                  >
+                    <i class="fab fa-2x fa-whatsapp"></i
+                  ></a>
+                </div>
+                <div class="mr-4">
+                  <a
+                    href="https://www.instagram.com/sonaelectrosolutions/?igshid=1g4a9v68zqo1q"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="Visit our Instagram page."
+                  >
+                    <i class="fab fa-2x fa-instagram"></i>
+                  </a>
+                </div>
+                <div class="mr-4">
+                  <a
+                    href="https://www.youtube.com/channel/UCkHWSNuYs_gudF7sgOe1WEw"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="Visit our YouTube channel."
+                  >
+                    <i class="fab fa-2x fa-youtube"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="social-icons2">
+              <div class="contain2">
+                <div class="mr-4">
+                  <a
+                    href="mailto:sonaelectronics1970@gmail.com"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="Email us your queries."
+                  >
+                    <i class="fas fa-2x fa-envelope"></i>
+                  </a>
+                </div>
+                <div class="mr-4">
+                  <a
+                    href="tel:+917053146721"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="Call Mr K.K. Sharma"
+                  >
+                    <i class="fas fa-2x fa-phone-alt"></i>
+                  </a>
+                </div>
+                <div class="mr-4">
+                  <a
+                    href="https://www.linkedin.com/company/sona-electrosolutions"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="Visit our Linkedin page."
+                  >
+                    <i class="fab fa-2x fa-linkedin-in"></i
+                  ></a>
+                </div>
+                <div class="mr-4">
+                  <a
+                    href="https://twitter.com/SonaElectrosol1?s=08"
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    aria-label="Take a look at out twitter account."
+                  >
+                    <i class="fab fa-2x fa-twitter"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="last">
+          <div class="contain-line">
+            <div class="mr-4">
+              <i class="far fa-copyright"></i>
+              Sona Electrosolutions, Inc. All rights reserved.
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
   </body>
+  <script src="dist/js/index.js"></script>
 </html>

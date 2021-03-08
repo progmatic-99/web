@@ -1,38 +1,212 @@
 // Smartphones
 @include mediaSm {
   nav {
-    .nav-menu {
+    justify-content: space-between;
+    .logo {
+      img {
+        max-height: 50px;
+      }
+    }
+
+    .nav-container {
       display: none;
-      min-height: 100vh;
-      min-width: 100vh;
-      z-index: 1000;
       &.show {
-        position: absolute;
-        top: 120px;
-        display: flex;
-        flex-direction: column;
-        @include easeOut(height);
-        .nav-item {
-          position: inherit;
+        top: 53px;
+        // transition: height 0.3ms ease-in 0s;
+        z-index: 1000;
+        overflow: hidden auto !important;
+        width: 100%;
+        left: 0px;
+        padding-top: 20px;
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        .nav-menu {
+          display: none;
+          &.show {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            top: 100px;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            @include easeOut(all);
+
+            .nav-item {
+              margin: 2rem 0 1rem 5rem;
+              float: left;
+
+              .nav-link {
+                font-size: 18px;
+              }
+            }
+
+            #dropdown-three {
+              i {
+                margin-left: 7.6rem;
+              }
+            }
+
+            #dropdown-one {
+              i {
+                margin: 2rem 0 0 8.9rem;
+              }
+            }
+
+            .transformer-dropdown {
+              display: none;
+              &.show {
+                position: relative;
+                background-color: $bg-color !important;
+                border: medium none !important;
+                z-index: 1 !important;
+
+                .transformer-item {
+                  display: block;
+                  clear: both;
+                  font-weight: 400;
+                  text-align: inherit;
+                  white-space: nowrap;
+                  background-color: transparent;
+                  color: $primary;
+                  padding: 8px 0;
+                }
+              }
+            }
+            .led-dropdown {
+              display: none;
+              &.show {
+                position: relative;
+                background-color: $bg-color !important;
+                border: medium none !important;
+                margin-left: 0 !important;
+                min-width: 7rem;
+                min-height: 448px;
+                z-index: 1 !important;
+
+                .led-item {
+                  display: block;
+                  clear: both;
+                  font-weight: 400;
+                  text-align: inherit;
+                  white-space: nowrap;
+                  padding: 8px 0;
+                  background-color: transparent;
+                  color: $primary;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .burger {
+      display: block;
+      cursor: pointer;
+    }
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .content {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+    .container {
+      .origin {
+        .start {
+          font-size: 18px;
+          padding: 2rem 3rem 2rem 3rem;
         }
       }
     }
   }
 
-  .burger {
-    display: block;
-    cursor: pointer;
+  footer {
+    .contact-icons {
+      .contain-icons {
+        .social-icons1 {
+          flex: auto;
+          .contain1 {
+            justify-content: center !important;
+            flex-wrap: wrap;
+            max-width: 100%;
+          }
+        }
+
+        .social-icons2 {
+          flex: auto;
+          .contain2 {
+            justify-content: center !important;
+            flex-wrap: wrap;
+            max-width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .last {
+    .contain-line {
+      .mr-4 {
+        font-size: 12px !important;
+      }
+    }
   }
 }
 
 // Tablets & Small Laptops
 @include mediaMd {
-  @include navWidth;
+  nav {
+    .nav-container {
+      .nav-menu {
+        min-width: 100%;
+      }
+    }
+  }
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    .container {
+      .cards {
+        .card {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @include mediaLg {
-  @include navWidth;
   @include slideImgHeight;
+  nav {
+    .nav-container {
+      .nav-menu {
+        min-width: 90%;
+      }
+    }
+  }
+
+  .content {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 720px;
+    .container {
+      .cards {
+        .card {
+          flex: 0 0 100%;
+          max-width: 100%;
+          width: 100%;
+        }
+      }
+    }
+  }
 }
 
 @include mediaXl {
