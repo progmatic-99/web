@@ -249,6 +249,9 @@ h2 {
       width: 100%;
       padding-right: 15px !important;
       padding-left: 15px !important; }
+      .content .container .cards .card:hover {
+        transform: scale(0.9);
+        transition: 0.5s; }
       .content .container .cards .card .card-container {
         background-color: white;
         color: #1c272b;
@@ -275,6 +278,145 @@ h2 {
           background-color: white; }
           .content .container .cards .card .card-container p span {
             color: #f1574f; }
+
+#contact .boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 5.4rem; }
+  #contact .boxes div {
+    font-size: 2rem;
+    padding: 1.5rem 2.5rem;
+    border: #fff 2px solid;
+    margin-bottom: 3rem;
+    transition: all 1s ease-out; }
+    #contact .boxes div a {
+      background-color: transparent;
+      text-decoration: none; }
+      #contact .boxes div a i {
+        color: #f0e5e5; }
+    #contact .boxes div:hover {
+      padding: 0.5rem 1.5rem;
+      background: #f1574f;
+      color: #f1574f; }
+
+.contain-this {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 3rem; }
+  .contain-this .product-container {
+    display: flex;
+    background-color: white;
+    flex-direction: column;
+    max-width: 400px;
+    max-height: 650px;
+    border-radius: 12px;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 2rem; }
+    .contain-this .product-container:hover {
+      transform: scale(0.9);
+      transition: 0.5s; }
+    .contain-this .product-container .led-conceal-img .conceal-img {
+      display: none; }
+      .contain-this .product-container .led-conceal-img .conceal-img.show img {
+        max-width: 14rem;
+        max-height: 14rem; }
+      .contain-this .product-container .led-conceal-img .conceal-img.show figcaption {
+        color: #1c272b; }
+    .contain-this .product-container .product-img img {
+      max-width: 14rem;
+      max-height: 14rem; }
+    .contain-this .product-container .info {
+      display: flex;
+      flex-flow: column nowrap;
+      text-align: center;
+      padding: 1rem 0.7rem;
+      border-radius: 3px; }
+      .contain-this .product-container .info .name .title {
+        color: #f1574f;
+        margin-top: 0.5rem; }
+      .contain-this .product-container .info .variants {
+        margin-top: 0.2rem; }
+        .contain-this .product-container .info .variants h3,
+        .contain-this .product-container .info .variants h4 {
+          color: black; }
+        .contain-this .product-container .info .variants ol {
+          font-size: 14px;
+          font-weight: bold;
+          margin-top: 0.2rem; }
+          .contain-this .product-container .info .variants ol.coils {
+            display: inline-block; }
+            .contain-this .product-container .info .variants ol.coils h4 {
+              color: #1c272b;
+              font-weight: 600; }
+      .contain-this .product-container .info .watt,
+      .contain-this .product-container .info .colors,
+      .contain-this .product-container .info .base,
+      .contain-this .product-container .info .color-temp,
+      .contain-this .product-container .info .input-volt,
+      .contain-this .product-container .info .power,
+      .contain-this .product-container .info .lumen,
+      .contain-this .product-container .info .designs,
+      .contain-this .product-container .info .roll,
+      .contain-this .product-container .info .driver {
+        margin-top: 0.3rem;
+        font-weight: light;
+        font-size: 15px; }
+        .contain-this .product-container .info .watt h3,
+        .contain-this .product-container .info .watt h4,
+        .contain-this .product-container .info .colors h3,
+        .contain-this .product-container .info .colors h4,
+        .contain-this .product-container .info .base h3,
+        .contain-this .product-container .info .base h4,
+        .contain-this .product-container .info .color-temp h3,
+        .contain-this .product-container .info .color-temp h4,
+        .contain-this .product-container .info .input-volt h3,
+        .contain-this .product-container .info .input-volt h4,
+        .contain-this .product-container .info .power h3,
+        .contain-this .product-container .info .power h4,
+        .contain-this .product-container .info .lumen h3,
+        .contain-this .product-container .info .lumen h4,
+        .contain-this .product-container .info .designs h3,
+        .contain-this .product-container .info .designs h4,
+        .contain-this .product-container .info .roll h3,
+        .contain-this .product-container .info .roll h4,
+        .contain-this .product-container .info .driver h3,
+        .contain-this .product-container .info .driver h4 {
+          color: black;
+          text-align: left; }
+          .contain-this .product-container .info .watt h3 span,
+          .contain-this .product-container .info .watt h4 span,
+          .contain-this .product-container .info .colors h3 span,
+          .contain-this .product-container .info .colors h4 span,
+          .contain-this .product-container .info .base h3 span,
+          .contain-this .product-container .info .base h4 span,
+          .contain-this .product-container .info .color-temp h3 span,
+          .contain-this .product-container .info .color-temp h4 span,
+          .contain-this .product-container .info .input-volt h3 span,
+          .contain-this .product-container .info .input-volt h4 span,
+          .contain-this .product-container .info .power h3 span,
+          .contain-this .product-container .info .power h4 span,
+          .contain-this .product-container .info .lumen h3 span,
+          .contain-this .product-container .info .lumen h4 span,
+          .contain-this .product-container .info .designs h3 span,
+          .contain-this .product-container .info .designs h4 span,
+          .contain-this .product-container .info .roll h3 span,
+          .contain-this .product-container .info .roll h4 span,
+          .contain-this .product-container .info .driver h3 span,
+          .contain-this .product-container .info .driver h4 span {
+            color: #13212b;
+            float: right; }
+      .contain-this .product-container .info .colors .red {
+        color: red; }
+      .contain-this .product-container .info .colors .blue {
+        color: blue; }
+      .contain-this .product-container .info .colors .green {
+        color: green; }
+      .contain-this .product-container .info .colors .yellow {
+        color: #caca2c; }
 
 footer {
   display: block;
@@ -327,6 +469,11 @@ footer {
       footer .contact-icons .mr-4 .fas,
       footer .contact-icons .mr-4 .far {
         color: #1c272b; }
+        footer .contact-icons .mr-4 .fab:hover,
+        footer .contact-icons .mr-4 .fas:hover,
+        footer .contact-icons .mr-4 .far:hover {
+          transform: scale(0.9);
+          transition: 0.5s; }
     footer .contact-icons .contain-icons {
       margin-left: 0;
       margin-right: 0;
@@ -390,7 +537,7 @@ footer {
             align-items: flex-start;
             justify-content: flex-start;
             flex-wrap: wrap;
-            transition: all 0.7s ease-out; }
+            transition: all 1s ease-out; }
             nav .nav-container.show .nav-menu.show .nav-item {
               margin: 2rem 0 1rem 5rem;
               float: left; }
@@ -446,6 +593,13 @@ footer {
     .content .container .origin .start {
       font-size: 18px;
       padding: 2rem 3rem 2rem 3rem; }
+  .contain-this .product-container .product-img img {
+    max-width: 12rem;
+    max-height: 12rem; }
+  .contain-this .product-container .info .name .title {
+    font-size: 12px; }
+  .contain-this .product-container .info .variants ol {
+    font-size: 12px; }
   footer .contact-icons .contain-icons .social-icons1 {
     flex: auto; }
     footer .contact-icons .contain-icons .social-icons1 .contain1 {

@@ -28,7 +28,7 @@ const slideImg = () => {
   });
 };
 
-const burger = () => {
+function burger() {
   const menuBtn = document.querySelector(".burger");
   const menu = document.querySelector(".nav-container");
   const menuNav = document.querySelector(".nav-menu");
@@ -51,7 +51,7 @@ const burger = () => {
       showMenu = false;
     }
   });
-};
+}
 
 const dropDown = (parent, child, icon) => {
   const dropdownBtn = document.querySelector(`${parent}`);

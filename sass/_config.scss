@@ -2,8 +2,8 @@ $bg-color: rgb(28, 39, 43);
 $link-bg: #f1574f;
 $primary: rgb(240, 229, 229);
 
-@mixin easeOut($property: transform) {
-  transition: $property 0.7s ease-out;
+@mixin easeOut() {
+  transition: all 1s ease-out;
 }
 
 @mixin slideImgHeight {

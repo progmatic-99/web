@@ -33,7 +33,7 @@
             align-items: flex-start;
             justify-content: flex-start;
             flex-wrap: wrap;
-            @include easeOut(all);
+            @include easeOut();
 
             .nav-item {
               margin: 2rem 0 1rem 5rem;
@@ -122,6 +122,29 @@
         .start {
           font-size: 18px;
           padding: 2rem 3rem 2rem 3rem;
+        }
+      }
+    }
+  }
+
+  .contain-this {
+    .product-container {
+      .product-img {
+        img {
+          max-width: 12rem;
+          max-height: 12rem;
+        }
+      }
+      .info {
+        .name {
+          .title {
+            font-size: 12px;
+          }
+        }
+        .variants {
+          ol {
+            font-size: 12px;
+          }
         }
       }
     }
