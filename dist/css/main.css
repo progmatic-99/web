@@ -638,7 +638,8 @@ footer {
           nav .nav-container.show .nav-menu #dropdown-three i,
           nav .nav-container.show .nav-menu #dropdown-one i {
             float: right;
-            margin-right: 110px; }
+            margin-right: 110px;
+            line-height: 12px; }
           nav .nav-container.show .nav-menu .transformer-dropdown {
             display: none; }
             nav .nav-container.show .nav-menu .transformer-dropdown.show {
@@ -651,12 +652,14 @@ footer {
               nav .nav-container.show .nav-menu .transformer-dropdown.show .transformer-item {
                 display: block;
                 clear: both;
+                line-height: 10px;
                 width: 100%;
                 font-weight: 600;
                 text-align: inherit;
                 white-space: nowrap;
                 background-color: transparent;
                 color: #f0e5e5;
+                font-size: 12px;
                 padding: 8px 0; }
                 nav .nav-container.show .nav-menu .transformer-dropdown.show .transformer-item:hover {
                   color: #f1574f; }
@@ -675,6 +678,8 @@ footer {
                 display: block;
                 clear: both;
                 font-weight: 600;
+                line-height: 12px;
+                font-size: 12px;
                 width: 100%;
                 text-align: inherit;
                 white-space: nowrap;

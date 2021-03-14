@@ -49,6 +49,7 @@
             i {
               float: right;
               margin-right: 110px;
+              line-height: 12px;
             }
           }
 
@@ -65,14 +66,15 @@
               .transformer-item {
                 display: block;
                 clear: both;
+                line-height: 10px;
                 width: 100%;
                 font-weight: 600;
                 text-align: inherit;
                 white-space: nowrap;
                 background-color: transparent;
                 color: $primary;
+                font-size: 12px;
                 padding: 8px 0;
-                // line-height: 14px;
                 &:hover {
                   color: $link-bg;
                 }
@@ -95,6 +97,8 @@
                 display: block;
                 clear: both;
                 font-weight: 600;
+                line-height: 12px;
+                font-size: 12px;
                 width: 100%;
                 text-align: inherit;
                 white-space: nowrap;

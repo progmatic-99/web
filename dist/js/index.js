@@ -75,14 +75,6 @@ const dropDown = (parent, child, icon) => {
       dropdownBtn.classList.add("show");
       dropdownIco.classList.add("show");
 
-      setTimeout(() => {
-        dropdownBtn.addEventListener("mouseout", () => {
-          dropdownContent.classList.remove("show");
-          dropdownBtn.classList.remove("show");
-          dropdownIco.classList.remove("show");
-        });
-      }, 4000);
-
       showMenu = true;
     } else {
       dropdownContent.classList.remove("show");
