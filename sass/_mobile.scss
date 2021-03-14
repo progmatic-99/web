@@ -2,7 +2,6 @@
 @include mediaSm {
   nav {
     justify-content: space-between;
-    position: relative;
     .logo {
       img {
         max-height: 50px;
@@ -57,9 +56,10 @@
             display: none;
             &.show {
               display: block;
+              position: fixed;
               background-color: $bg-color !important;
               border: medium none !important;
-              z-index: 0 !important;
+              // z-index: 0 !important;
               width: 100%;
               overflow: auto;
 
@@ -85,13 +85,15 @@
             display: none;
             &.show {
               display: block;
-              overflow: auto;
-              background-color: $bg-color !important;
+              overflow-x: hidden;
+              overflow-y: scroll;
+              background-color: transparent !important;
               border: medium none !important;
               margin-left: 0 !important;
               min-width: 7rem;
+              height: 520px;
               width: 100%;
-              z-index: 0 !important;
+              // z-index: 0 !important;
 
               .led-item {
                 display: block;

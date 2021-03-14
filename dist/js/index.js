@@ -43,8 +43,10 @@ function burger() {
       menu.classList.add("show");
       menuNav.classList.add("show");
 
-      body.style.position = "fixed";
-      body.style.top = `-${window.scrollMaxY}px`;
+      // body.style.position = "fixed";
+      // body.style.top = `-${window.scrollY}px`;
+      // body.style.overflow = "hidden";
+      // body.style.height = "100vh";
 
       showMenu = true;
     } else {
@@ -52,10 +54,13 @@ function burger() {
       menu.classList.remove("show");
       menuNav.classList.remove("show");
 
-      const scrollY = body.style.top;
-      body.style.position = "";
-      body.style.top = "";
-      window.scrollTo(0, parseInt(scrollY || "0") * -1);
+      // const scrollY = body.style.top;
+      // body.style.position = "";
+      // body.style.top = "";
+      // window.scrollTo(0, parseInt(scrollY || "0") * -1);
+
+      // body.style.overflow = "";
+      // body.style.height = "";
 
       showMenu = false;
     }
@@ -74,6 +79,15 @@ const dropDown = (parent, child, icon) => {
       dropdownContent.classList.add("show");
       dropdownBtn.classList.add("show");
       dropdownIco.classList.add("show");
+
+      dropdownBtn.addEventListener("mouseover", () => {
+        dropdownContent.addEventListener("mouseout", () => {
+          dropdownContent.classList.remove("show");
+          dropdownBtn.classList.remove("show");
+          dropdownIco.classList.remove("show");
+          showMenu = false;
+        });
+      });
 
       showMenu = true;
     } else {

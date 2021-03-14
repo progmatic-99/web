@@ -602,8 +602,7 @@ footer {
 
 @media screen and (max-width: 668px) {
   nav {
-    justify-content: space-between;
-    position: relative; }
+    justify-content: space-between; }
     nav .logo img {
       max-height: 50px; }
     nav .nav-container {
@@ -644,9 +643,9 @@ footer {
             display: none; }
             nav .nav-container.show .nav-menu .transformer-dropdown.show {
               display: block;
+              position: fixed;
               background-color: #1c272b !important;
               border: medium none !important;
-              z-index: 0 !important;
               width: 100%;
               overflow: auto; }
               nav .nav-container.show .nav-menu .transformer-dropdown.show .transformer-item {
@@ -667,13 +666,14 @@ footer {
             display: none; }
             nav .nav-container.show .nav-menu .led-dropdown.show {
               display: block;
-              overflow: auto;
-              background-color: #1c272b !important;
+              overflow-x: hidden;
+              overflow-y: scroll;
+              background-color: transparent !important;
               border: medium none !important;
               margin-left: 0 !important;
               min-width: 7rem;
-              width: 100%;
-              z-index: 0 !important; }
+              height: 520px;
+              width: 100%; }
               nav .nav-container.show .nav-menu .led-dropdown.show .led-item {
                 display: block;
                 clear: both;
