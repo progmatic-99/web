@@ -53,6 +53,18 @@ h2 {
   }
 }
 
+.img-container {
+  .about-img {
+    background: fixed center no-repeat cover;
+    object-position: center;
+    img {
+      width: 100%;
+      max-height: 550px;
+      display: block;
+    }
+  }
+}
+
 .circles {
   position: relative;
   text-align: center;
@@ -60,6 +72,7 @@ h2 {
   right: 0;
   // bottom: -8px;
   margin-top: 2.5em;
+  cursor: pointer;
   margin-bottom: 3em;
 
   .circle {
@@ -168,6 +181,73 @@ h2 {
   }
 }
 
+.about-content {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 40px 0;
+    width: 100%;
+
+    .about-cards {
+      display: flex;
+      flex-wrap: wrap;
+      margin-right: -15px;
+      margin-left: -15px;
+      padding: 0 82px;
+
+      .card {
+        display: flex;
+        flex: 0 0 50%;
+        max-width: 50%;
+        margin-top: 1.5rem !important;
+        align-items: stretch !important;
+        position: relative;
+        width: 100%;
+        padding-right: 15px !important;
+        padding-left: 15px !important;
+
+        &:hover {
+          transform: scale(0.9);
+          transition: 0.3s;
+        }
+
+        .about-container {
+          background-color: $primary;
+          color: rgb(28, 39, 43);
+          padding: 20px;
+          border-radius: 16px;
+          text-align: center;
+          min-height: 240px;
+          width: 100%;
+
+          h3 {
+            background-color: $primary;
+            font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
+            font-weight: 700;
+            color: $link-bg;
+            font-size: 2.5rem;
+          }
+
+          p,
+          ul {
+            color: rgb(19, 33, 43);
+            box-sizing: inherit;
+            display: block;
+            font-weight: 500;
+            font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+            font-size: 16px;
+            line-height: 1.5;
+            margin-top: 1.5rem;
+            margin-bottom: 0.3rem;
+            text-align: center;
+            background-color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
 #contact {
   .boxes {
     display: flex;
@@ -224,17 +304,20 @@ h2 {
       .conceal-img {
         display: none;
         &.show {
-          img {
-            max-width: 14rem;
-            max-height: 14rem;
+          display: block;
+          @include fade($num: 4, $fade: 5, $visible: 0);
+          .conceal-imgs {
+            display: block;
+            max-width: 12rem;
+            max-height: 12rem;
           }
           figcaption {
-            color: $bg-color;
+            color: black;
+            text-align: center;
           }
         }
       }
     }
-
     .product-img {
       img {
         max-width: 14rem;
@@ -252,6 +335,9 @@ h2 {
         .title {
           color: $link-bg;
           margin-top: 0.5rem;
+          &.led-conceal {
+            font-size: 17px;
+          }
         }
       }
 

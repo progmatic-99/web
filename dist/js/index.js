@@ -32,6 +32,7 @@ function burger() {
   const menuBtn = document.querySelector(".burger");
   const menu = document.querySelector(".nav-container");
   const menuNav = document.querySelector(".nav-menu");
+  const body = document.body;
 
   // Set initial state of menu
   let showMenu = false;
@@ -42,11 +43,19 @@ function burger() {
       menu.classList.add("show");
       menuNav.classList.add("show");
 
+      body.style.position = "fixed";
+      body.style.top = `-${window.scrollMaxY}px`;
+
       showMenu = true;
     } else {
       menuBtn.classList.remove("close");
       menu.classList.remove("show");
       menuNav.classList.remove("show");
+
+      const scrollY = body.style.top;
+      body.style.position = "";
+      body.style.top = "";
+      window.scrollTo(0, parseInt(scrollY || "0") * -1);
 
       showMenu = false;
     }
@@ -65,6 +74,14 @@ const dropDown = (parent, child, icon) => {
       dropdownContent.classList.add("show");
       dropdownBtn.classList.add("show");
       dropdownIco.classList.add("show");
+
+      setTimeout(() => {
+        dropdownBtn.addEventListener("mouseout", () => {
+          dropdownContent.classList.remove("show");
+          dropdownBtn.classList.remove("show");
+          dropdownIco.classList.remove("show");
+        });
+      }, 4000);
 
       showMenu = true;
     } else {

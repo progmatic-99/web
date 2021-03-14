@@ -4,8 +4,7 @@ nav {
   flex-flow: row nowrap;
   justify-content: flex-start;
   padding: 20px 48px !important;
-  position: relative;
-  // z-index: 1000;
+  z-index: 1000;
 
   .logo {
     display: inline-block;
@@ -30,7 +29,6 @@ nav {
       font-weight: 600;
       align-items: center;
       text-transform: uppercase;
-      // position: relative;
 
       .nav-item {
         &.products {
@@ -68,11 +66,14 @@ nav {
           }
         }
       }
+
       .transformer-dropdown {
         display: none;
         &.show {
           @include parentDropdown;
+          z-index: 1000;
           border: 0 !important;
+          transition: all 1s ease-out;
 
           .transformer-item {
             @include childDropdown;
@@ -85,7 +86,9 @@ nav {
         display: none;
         &.show {
           @include parentDropdown;
+          z-index: 1000;
           border: 0 !important;
+          transition: all 1s ease-out;
 
           .led-item {
             @include childDropdown;
@@ -105,9 +108,6 @@ nav {
     height: 3px;
     margin: 5px;
     background-color: $primary;
-    &:hover {
-      color: $link-bg;
-    }
   }
   // Rotate into X with menu lines
   &.close {

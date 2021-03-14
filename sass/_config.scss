@@ -19,7 +19,7 @@ $primary: rgb(240, 229, 229);
 @mixin parentDropdown {
   display: block;
   position: absolute;
-  z-index: 1000 !important;
+  float: none;
   min-width: 10rem;
   padding: 0.5rem 0;
   margin: 0.55rem 0 0 0;
