@@ -38,17 +38,10 @@ h2 {
   }
 }
 
-#slide-images {
-  .slide {
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    object-position: center;
-    img {
-      width: 100%;
-      display: block;
-      @include fade($num: 4, $fade: 5, $visible: 0);
+.slide {
+  .carousel-indicators {
+    &.active {
+      background-color: $link-bg !important;
     }
   }
 }
@@ -61,31 +54,6 @@ h2 {
       width: 100%;
       max-height: 550px;
       display: block;
-    }
-  }
-}
-
-.circles {
-  position: relative;
-  text-align: center;
-  left: 0;
-  right: 0;
-  // bottom: -8px;
-  margin-top: 2.5em;
-  cursor: pointer;
-  margin-bottom: 3em;
-
-  .circle {
-    width: 16px;
-    height: 16px;
-    border-radius: 60%;
-    background-color: rgb(236, 227, 227);
-    display: inline-block;
-    margin: 0 8px;
-    position: relative;
-
-    &.highlight {
-      background-color: $link-bg;
     }
   }
 }

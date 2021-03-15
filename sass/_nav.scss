@@ -1,144 +1,8 @@
-// nav {
-//   display: flex;
-//   align-items: center;
-//   flex-flow: row nowrap;
-//   justify-content: flex-start;
-//   padding: 20px 48px !important;
-//   z-index: 1000;
-
-//   .logo {
-//     display: inline-block;
-//     background-color: $bg-color;
-//     img {
-//       max-height: 55px;
-//     }
-//   }
-//   .nav-container {
-//     display: flex;
-//     flex-basis: auto;
-//     justify-content: flex-end;
-//     padding-bottom: 0 !important;
-//     flex-grow: 1;
-//     align-items: center;
-
-//     .nav-menu {
-//       flex-direction: row;
-//       display: flex;
-//       justify-content: space-around;
-//       min-width: 75%;
-//       font-weight: 600;
-//       align-items: center;
-//       text-transform: uppercase;
-
-//       .nav-item {
-//         &.products {
-//           padding-bottom: 0.3rem;
-//         }
-//         &.active > a {
-//           color: $link-bg !important;
-//         }
-
-//         a {
-//           .material-icons {
-//             &.show {
-//               transform: rotate(-180deg);
-//               transition: transform 0.25s linear 0s;
-//             }
-//           }
-//         }
-
-//         a:focus {
-//           color: $link-bg;
-//           .material-icons {
-//             color: $link-bg !important;
-//           }
-//         }
-//         .nav-link {
-//           color: $primary;
-//           font-size: 17px;
-//           letter-spacing: 0.5px;
-
-//           &:hover {
-//             color: $link-bg;
-//             .material-icons {
-//               color: $link-bg !important;
-//             }
-//           }
-//         }
-//       }
-
-//       .transformer-dropdown {
-//         display: none;
-//         &.show {
-//           @include parentDropdown;
-//           z-index: 1000;
-//           border: 0 !important;
-//           transition: all 1s ease-out;
-
-//           .transformer-item {
-//             @include childDropdown;
-//             @include dropHover;
-//           }
-//         }
-//       }
-
-//       .led-dropdown {
-//         display: none;
-//         &.show {
-//           @include parentDropdown;
-//           z-index: 1000;
-//           border: 0 !important;
-//           transition: all 1s ease-out;
-
-//           .led-item {
-//             @include childDropdown;
-//             min-width: 26.5rem;
-//             @include dropHover;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// .burger {
-//   display: none;
-//   div {
-//     width: 25px;
-//     height: 3px;
-//     margin: 5px;
-//     background-color: $primary;
-//   }
-//   // Rotate into X with menu lines
-//   &.close {
-//     transform: rotate(180deg);
-
-//     .line {
-//       // Line 1 - Rotate
-//       &:nth-child(1) {
-//         transform: rotate(45deg) translate(5px, 5px);
-//       }
-
-//       // Line 2 - Hide
-//       &:nth-child(2) {
-//         opacity: 0;
-//       }
-
-//       // Line 3 - Rotate
-//       &:nth-child(3) {
-//         transform: rotate(-45deg) translate(7px, -6px);
-//       }
-//     }
-//   }
-// }
-
 nav.navbar {
   background-color: $bg-color !important;
   min-height: 6rem;
   .logo {
     display: inline-block;
-    // margin-left: 1.5rem;
-    // background-color: $bg-color;
     img {
       max-height: 50px;
     }
@@ -146,7 +10,6 @@ nav.navbar {
 
   .navbar-toggler {
     background-color: $bg-color !important;
-    // color: $primary !important;
     &:focus,
     &:active {
       outline: none;
@@ -161,9 +24,6 @@ nav.navbar {
     }
   }
   .collapse {
-    // .ml-auto {
-    //   margin-right: 4rem;
-    // }
     .navbar-nav {
       text-transform: uppercase;
       letter-spacing: 1px;

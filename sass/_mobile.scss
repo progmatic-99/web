@@ -104,7 +104,6 @@
 
 // Tablets & Small Laptops
 @include mediaMd {
-  @include slideImgHeight;
   nav {
     .navbar-collapse {
       margin-top: 1rem;
@@ -164,7 +163,6 @@
 }
 
 @include mediaLg {
-  @include slideImgHeight;
   nav {
     .navbar-collapse {
       margin-top: 1rem;
@@ -223,7 +221,6 @@
 }
 
 @include mediaXl {
-  @include slideImgHeight;
   .content {
     .container {
       max-width: 100% !important;
