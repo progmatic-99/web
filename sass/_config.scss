@@ -2,10 +2,6 @@ $bg-color: rgb(28, 39, 43);
 $link-bg: #f1574f;
 $primary: rgb(240, 229, 229);
 
-@mixin easeOut() {
-  transition: all 1s ease-out;
-}
-
 @mixin slideImgHeight {
   #slide-images {
     .slide {
@@ -13,51 +9,6 @@ $primary: rgb(240, 229, 229);
         height: 450px;
       }
     }
-  }
-}
-
-@mixin parentDropdown {
-  display: block;
-  position: absolute;
-  float: none;
-  min-width: 10rem;
-  padding: 0.5rem 0;
-  margin: 0.55rem 0 0 0;
-  font-size: 16px;
-  font-weight: 500;
-  color: $bg-color;
-  text-align: left;
-  list-style: none;
-  background-color: rgb(236, 221, 221);
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 0.25rem;
-}
-
-@mixin childDropdown {
-  display: block;
-  clear: both;
-  font-size: 14px;
-  font-weight: 600;
-  text-align: inherit;
-  white-space: nowrap;
-  background-color: transparent;
-  border: 0;
-  color: $bg-color;
-  line-height: 24px;
-  padding: 6px 24px;
-  width: 220px;
-}
-
-@mixin dropHover {
-  &:hover {
-    background: #ee7770 none repeat scroll 0% 0%;
-  }
-}
-
-@mixin dropHovMob {
-  &:hover {
-    color: #ee7770;
   }
 }
 
@@ -101,7 +52,7 @@ $primary: rgb(240, 229, 229);
 
 @mixin mediaMd {
   // width cannot be more than 871px
-  @media screen and (max-width: 871px) {
+  @media screen and (min-width: 669px) and (max-width: 871px) {
     @content;
   }
 }

@@ -9,6 +9,12 @@
     <meta name="Description" content="Sona Electrosolutions website" />
     <link rel="icon" href="dist/images/sona-trans.png" />
     <title>Sona Electrosolutions</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="dist/css/main.css" />
     <script
       src="https://kit.fontawesome.com/7b15d2d2ab.js"
@@ -16,8 +22,8 @@
     ></script>
   </head>
   <body>
-    <nav class="nav-bar">
-      <div class="logo">
+    <nav class="navbar navbar-expand-lg">
+      <div class="logo navbar-brand">
         <a href="index.html">
           <img
             src="dist/images/sona-trans.png"
@@ -25,108 +31,130 @@
           />
         </a>
       </div>
-      <div class="nav-container">
-        <ul class="nav-menu">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon">
+          <i
+            class="fas fa-bars"
+            style="
+              color: rgb(240, 229, 229);
+              background-color: rgb(28, 39, 43);
+              font-size: 28px;
+              font-weight: 650;
+            "
+          ></i>
+        </span>
+      </button>
+
+      <div
+        class="collapse navbar-collapse justify-content-center"
+        id="navbarSupportedContent"
+      >
+        <ul class="navbar-nav ml-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="index.html"> Home </a>
+            <a class="nav-link" href="index.html"
+              >Home <span class="sr-only">(current)</span></a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html"> About </a>
+            <a class="nav-link" href="about.html">About</a>
           </li>
-          <li class="nav-item products">
+          <li class="nav-item dropdown">
             <a
-              class="nav-link"
-              id="dropdown-three"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdown"
               role="button"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
             >
               Sona LED
-              <i class="fas fa-angle-down material-icons md-led"></i>
             </a>
-            <div class="led-dropdown" aria-labelledby="dropdown-three">
-              <a href="deco-light.html" class="led-item">LED DECO LIGHT 0.5W</a>
-              <a href="candle-bulbs.html" class="led-item"
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a href="deco-light.html" class="dropdown-item"
+                >LED DECO LIGHT 0.5W</a
+              >
+              <a href="candle-bulbs.html" class="dropdown-item"
                 >SONA CANDLE BULBS (VIVID SERIES)</a
               >
-              <a href="bulb-180.html" class="led-item"
-                >LED BULB 180 DEGREE (AL BODY) (ILLUMINITE SERIES)</a
+              <a href="bulb-180.html" class="dropdown-item"
+                >LED BULB 180 DEGREE (AL BODY)<br />(ILLUMINITE SERIES)</a
               >
-              <a href="bulb-emergency.html" class="led-item"
+              <a href="bulb-emergency.html" class="dropdown-item"
                 >EMERGENCY LED BULB (MOONLIT SERIES)</a
               >
-              <a href="high-wattage.html" class="led-item"
-                >SONA HIGH WATTAGE BULBS (ALLURE SERIES)</a
+              <a href="high-wattage.html" class="dropdown-item"
+                >SONA HIGH WATTAGE BULBS<br />(ALLURE SERIES)</a
               >
-              <a href="led-conceal.html" class="led-item"
-                >SONA LED CONCEALED/DOWNLIGHT (MARVEL SERIES)</a
+              <a href="led-conceal.html" class="dropdown-item"
+                >SONA LED CONCEALED/DOWNLIGHT<br />(MARVEL SERIES)</a
               >
-              <a href="tubelight.html" class="led-item"
-                >SONA LED TUBELIGHT/BATTEN (RELUCENT SERIES)</a
+              <a href="tubelight.html" class="dropdown-item"
+                >SONA LED TUBELIGHT/BATTEN<br />(RELUCENT SERIES)</a
               >
-              <a href="slim.html" class="led-item"
+              <a href="slim.html" class="dropdown-item"
                 >SONA SLIM PANELS (GLISTEN SERIES)</a
               >
-              <a href="surface.html" class="led-item"
+              <a href="surface.html" class="dropdown-item"
                 >SONA SURFACE PANELS (LUMIN SERIES)</a
               >
-              <a href="spotlights.html" class="led-item"
+              <a href="spotlights.html" class="dropdown-item"
                 >SONA SPOTLIGHTS (IMPERIAL SERIES)</a
               >
-              <a href="tbulb.html" class="led-item"
+              <a href="tbulb.html" class="dropdown-item"
                 >SONA T-BULB (GLARE SERIES)</a
               >
-              <a href="obulb.html" class="led-item"
+              <a href="obulb.html" class="dropdown-item"
                 >SONA O-BULB (DAZZLE SERIES)</a
               >
-              <a href="street.html" class="led-item"
-                >SONA STREET LIGHTS (EMINENT SERIES)</a
+              <a href="street.html" class="dropdown-item"
+                >SONA STREET LIGHTS<br />(EMINENT SERIES)</a
               >
-              <a href="entice.html" class="led-item">SONA ENTICE STRIP LIGHT</a>
+              <a href="entice.html" class="dropdown-item"
+                >SONA ENTICE STRIP LIGHT</a
+              >
             </div>
           </li>
-          <li class="nav-item products">
+
+          <li class="nav-item dropdown">
             <a
-              class="nav-link"
-              id="dropdown-one"
+              class="nav-link dropdown-toggle"
+              id="navbarDropdownSec"
               role="button"
               data-toggle="dropdown"
               aria-haspopup="true"
               aria-expanded="false"
             >
-              Transformers<br />
-              & Coils
-              <i class="fas fa-angle-down material-icons md-trans"></i>
+              Transformer & Coils
             </a>
-            <div class="transformer-dropdown" aria-labelledby="dropdown-one">
-              <a href="ee.html" class="transformer-item">EE SERIES</a>
-              <a href="eer.html" class="transformer-item">EER SERIES</a>
-              <a href="etd.html" class="transformer-item">ETD SERIES</a>
-              <a href="efd.html" class="transformer-item">EFD SERIES</a>
-              <a href="ec.html" class="transformer-item">EC SERIES</a>
-              <a href="pq.html" class="transformer-item">PQ SERIES</a>
-              <a href="edr.html" class="transformer-item">EDR SERIES</a>
-              <a href="rm.html" class="transformer-item">RM SERIES</a>
-              <a href="epc.html" class="transformer-item">EPC SERIES</a>
-              <a href="line.html" class="transformer-item">LINE FILTERS</a>
-              <a href="toroidal.html" class="transformer-item"
-                >TOROIDAL COILS</a
-              >
-              <a href="drum.html" class="transformer-item"
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownSec">
+              <a href="ee.html" class="dropdown-item">EE SERIES</a>
+              <a href="eer.html" class="dropdown-item">EER SERIES</a>
+              <a href="etd.html" class="dropdown-item">ETD SERIES</a>
+              <a href="efd.html" class="dropdown-item">EFD SERIES</a>
+              <a href="ec.html" class="dropdown-item">EC SERIES</a>
+              <a href="pq.html" class="dropdown-item">PQ SERIES</a>
+              <a href="edr.html" class="dropdown-item">EDR SERIES</a>
+              <a href="rm.html" class="dropdown-item">RM SERIES</a>
+              <a href="epc.html" class="dropdown-item">EPC SERIES</a>
+              <a href="line.html" class="dropdown-item">LINE FILTERS</a>
+              <a href="toroidal.html" class="dropdown-item">TOROIDAL COILS</a>
+              <a href="drum.html" class="dropdown-item"
                 >DRUM COIL AND BIT COILS</a
               >
             </div>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html"> Contact Us </a>
+            <a class="nav-link" href="contact.html">Contact Us</a>
           </li>
         </ul>
-      </div>
-      <div class="burger">
-        <div class="line"></div>
-        <div class="line"></div>
-        <div class="line"></div>
       </div>
     </nav>
     <div id="slide-images" data-component="slideshow">
@@ -163,8 +191,8 @@
           </p>
         </div>
         <div class="cards">
-          <div class="first card">
-            <div class="card-container">
+          <div class="first card-native">
+            <div class="card-native-container">
               <h3>Wide Range of Products</h3>
               <p class="first-content">
                 Transformers, Line filter, Power choke, SMPS Transformer, Choke
@@ -173,8 +201,8 @@
               </p>
             </div>
           </div>
-          <div class="second card">
-            <div class="card-container">
+          <div class="second card-native">
+            <div class="card-native-container">
               <h3>Innovation</h3>
               <p class="second-content">
                 SONA LED specializes in the design, research, production and
@@ -183,8 +211,8 @@
               </p>
             </div>
           </div>
-          <div class="third card">
-            <div class="card-container">
+          <div class="third card-native">
+            <div class="card-native-container">
               <h3>Modern Design & Aesthetic</h3>
               <p class="third-content">
                 SONA LED stands out as it combines its innovative engineering
@@ -194,8 +222,8 @@
               </p>
             </div>
           </div>
-          <div class="fourth card">
-            <div class="card-container">
+          <div class="fourth card-native">
+            <div class="card-native-container">
               <h3>Quality</h3>
               <p class="fourth-content">
                 Intense quality checking takes place right from the stage of
@@ -206,8 +234,8 @@
               </p>
             </div>
           </div>
-          <div class="fifth card">
-            <div class="card-container">
+          <div class="fifth card-native">
+            <div class="card-native-container">
               <h3>Meeting large requirements</h3>
               <p class="fifth-content">
                 Meeting the high volume requirement in short period with high
@@ -216,8 +244,8 @@
               </p>
             </div>
           </div>
-          <div class="sixth card">
-            <div class="card-container">
+          <div class="sixth card-native">
+            <div class="card-native-container">
               <h3>Make in India</h3>
               <p class="sixth-content">
                 Our Founder, <span>Mr. K.K. Sharma,</span> decided to launch
@@ -345,5 +373,20 @@
       </footer>
     </div>
   </body>
+  <script
+    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"
+  ></script>
   <script src="dist/js/index.js" type="text/javascript"></script>
 </html>

@@ -1,130 +1,37 @@
 // Smartphones
 @include mediaSm {
+  h2 {
+    font-size: 40px;
+  }
+
   nav {
-    justify-content: space-between;
-    .logo {
-      img {
-        max-height: 50px;
-      }
-    }
-
-    .nav-container {
-      display: none;
-      &.show {
-        top: 80px;
-        bottom: 0px;
-        position: fixed;
-        display: block;
-        z-index: 1000;
-        width: 100%;
-        height: 100vh;
-        background-color: $bg-color;
-        left: 0px;
-        overflow-y: scroll;
-        .nav-menu {
-          height: 100vh;
-          width: 100%;
-          display: flex;
-          // position: absolute;
-          flex-direction: column;
-          align-items: flex-start;
-          justify-content: flex-start;
-          flex-wrap: wrap;
-          @include easeOut();
-
-          .nav-item {
-            margin: 2rem 0 1rem 3rem;
-            float: left;
-            width: 100%;
-
-            .nav-link {
-              font-size: 18px;
-              display: block;
-            }
-          }
-
-          #dropdown-three,
-          #dropdown-one {
-            i {
+    .navbar-collapse {
+      margin-top: 1rem;
+      .navbar-nav {
+        .nav-item {
+          .dropdown-menu {
+            background-color: $bg-color;
+            min-width: 20rem;
+            outline: none;
+            border: none;
+            margin: 0 !important;
+            a {
+              color: $primary;
+              padding: 0.3rem 1.5rem;
+              font-size: 12px;
+              font-weight: 700;
               float: right;
-              margin-right: 110px;
-              line-height: 12px;
-            }
-          }
+              margin-right: 10px;
+              letter-spacing: 0;
 
-          .transformer-dropdown {
-            display: none;
-            &.show {
-              display: block;
-              position: fixed;
-              background-color: $bg-color !important;
-              border: medium none !important;
-              // z-index: 0 !important;
-              width: 100%;
-              overflow: auto;
-
-              .transformer-item {
-                display: block;
-                clear: both;
-                line-height: 10px;
-                width: 100%;
-                font-weight: 600;
-                text-align: inherit;
-                white-space: nowrap;
-                background-color: transparent;
-                color: $primary;
-                font-size: 12px;
-                padding: 8px 0;
-                &:hover {
-                  color: $link-bg;
-                }
-              }
-            }
-          }
-          .led-dropdown {
-            display: none;
-            &.show {
-              display: block;
-              overflow-x: hidden;
-              overflow-y: scroll;
-              background-color: transparent !important;
-              border: medium none !important;
-              margin-left: 0 !important;
-              min-width: 7rem;
-              height: 520px;
-              width: 100%;
-              // z-index: 0 !important;
-
-              .led-item {
-                display: block;
-                clear: both;
-                font-weight: 600;
-                line-height: 12px;
-                font-size: 12px;
-                width: 100%;
-                text-align: inherit;
-                white-space: nowrap;
-                padding: 8px 0;
-                background-color: transparent;
-                color: $primary;
-                &:hover {
-                  color: $link-bg;
-                }
+              &:hover {
+                background-color: $link-bg;
               }
             }
           }
         }
       }
     }
-
-    .burger {
-      display: block;
-      cursor: pointer;
-    }
-  }
-
-  h2 {
-    font-size: 40px;
   }
 
   .content {
@@ -197,10 +104,33 @@
 
 // Tablets & Small Laptops
 @include mediaMd {
+  @include slideImgHeight;
   nav {
-    .nav-container {
-      .nav-menu {
-        min-width: 100%;
+    .navbar-collapse {
+      margin-top: 1rem;
+      .navbar-nav {
+        .nav-item {
+          .dropdown-menu {
+            background-color: $bg-color;
+            min-width: 20rem;
+            outline: none;
+            border: none;
+            margin: 0 !important;
+            a {
+              color: $primary;
+              font-size: 12px;
+              font-weight: 600;
+              float: right;
+              margin-right: 10px;
+              letter-spacing: 0;
+              padding: 0.3rem 1.5rem;
+
+              &:hover {
+                background-color: $link-bg;
+              }
+            }
+          }
+        }
       }
     }
   }
@@ -210,7 +140,7 @@
     min-width: 100%;
     .container {
       .cards {
-        .card {
+        .card-native {
           flex: 0 0 100%;
           max-width: 100%;
         }
@@ -236,20 +166,39 @@
 @include mediaLg {
   @include slideImgHeight;
   nav {
-    .nav-container {
-      .nav-menu {
-        min-width: 90%;
+    .navbar-collapse {
+      margin-top: 1rem;
+      .navbar-nav {
+        .nav-item {
+          .dropdown-menu {
+            background-color: $bg-color;
+            min-width: 20rem;
+            outline: none;
+            border: none;
+            margin: 0 !important;
+            a {
+              color: $primary;
+              font-size: 12px;
+              font-weight: 600;
+              float: right;
+              margin-right: 10px;
+
+              &:hover {
+                background-color: $link-bg;
+              }
+            }
+          }
+        }
       }
     }
   }
-
   .content {
     margin-left: auto;
     margin-right: auto;
     max-width: 720px;
     .container {
       .cards {
-        .card {
+        .card-native {
           flex: 0 0 100%;
           max-width: 100%;
           width: 100%;
@@ -275,4 +224,10 @@
 
 @include mediaXl {
   @include slideImgHeight;
+  .content {
+    .container {
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+  }
 }

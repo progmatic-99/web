@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif;
+  font-family: "Open Sans", "Segoe UI", Tahoma, sans-serif !important;
   background-color: $bg-color;
 }
 
@@ -95,6 +95,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     padding: 40px 0;
+    width: 100%;
 
     .origin {
       color: $primary;
@@ -129,7 +130,7 @@ h2 {
         text-align: center;
         width: 100%;
       }
-      .card {
+      .card-native {
         display: flex;
         flex: 0 0 33.3%;
         max-width: 33.3%;
@@ -143,11 +144,11 @@ h2 {
           transform: scale(0.9);
           transition: 0.5s;
         }
-        .card-container {
+        .card-native-container {
           background-color: rgb(255, 255, 255);
           color: rgb(28, 39, 43);
           padding: 20px;
-          border-radius: 12px;
+          border-radius: 12px !important;
           text-align: center;
           min-height: 240px;
           width: 100%;
@@ -156,6 +157,7 @@ h2 {
             background-color: white;
             font-family: "Roboto", "Franklin Gothic Medium", Tahoma, sans-serif;
             font-weight: 700;
+            font-size: 1.17em;
           }
 
           p {

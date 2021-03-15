@@ -45,8 +45,8 @@ function burger() {
 
       // body.style.position = "fixed";
       // body.style.top = `-${window.scrollY}px`;
-      // body.style.overflow = "hidden";
-      // body.style.height = "100vh";
+      body.style.overflow = "hidden";
+      body.style.height = "100vh";
 
       showMenu = true;
     } else {
@@ -59,8 +59,8 @@ function burger() {
       // body.style.top = "";
       // window.scrollTo(0, parseInt(scrollY || "0") * -1);
 
-      // body.style.overflow = "";
-      // body.style.height = "";
+      body.style.overflow = "";
+      body.style.height = "";
 
       showMenu = false;
     }
@@ -80,14 +80,14 @@ const dropDown = (parent, child, icon) => {
       dropdownBtn.classList.add("show");
       dropdownIco.classList.add("show");
 
-      dropdownBtn.addEventListener("mouseover", () => {
-        dropdownContent.addEventListener("mouseout", () => {
-          dropdownContent.classList.remove("show");
-          dropdownBtn.classList.remove("show");
-          dropdownIco.classList.remove("show");
-          showMenu = false;
-        });
-      });
+      // dropdownBtn.addEventListener("mouseover", () => {
+      //   dropdownContent.addEventListener("mouseout", () => {
+      //     dropdownContent.classList.remove("show");
+      //     dropdownBtn.classList.remove("show");
+      //     dropdownIco.classList.remove("show");
+      //     showMenu = false;
+      //   });
+      // });
 
       showMenu = true;
     } else {
@@ -107,10 +107,10 @@ const dropdownLed = () =>
   dropDown("#dropdown-three", ".led-dropdown", ".md-led");
 
 const app = () => {
-  burger();
+  // burger();
   slideImg();
-  dropdownTrans();
-  dropdownLed();
+  // dropdownTrans();
+  // dropdownLed();
 };
 
 app();
