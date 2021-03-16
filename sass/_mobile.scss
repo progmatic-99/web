@@ -38,6 +38,12 @@
     padding-left: 15px !important;
     padding-right: 15px !important;
     .container {
+      .cards {
+        .card-native {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
       .origin {
         .start {
           font-size: 18px;
@@ -47,23 +53,57 @@
     }
   }
 
+  .about-content {
+    margin-left: auto;
+    margin-right: auto;
+    min-width: 100%;
+    .container {
+      .about-cards {
+        .card-native {
+          flex: 0 0 100%;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
   .contain-this {
     .product-container {
+      max-height: 700px;
       .product-img {
         img {
-          max-width: 12rem;
-          max-height: 12rem;
+          max-width: 10rem;
+          max-height: 10rem;
         }
       }
       .info {
+        .watt,
+        .colors,
+        .base,
+        .color-temp,
+        .input-volt,
+        .power,
+        .lumen,
+        .designs,
+        .roll,
+        .driver {
+          h4 {
+            font-size: 12px;
+          }
+        }
         .name {
           .title {
-            font-size: 18px;
+            font-size: 16px;
           }
         }
         .variants {
+          margin-bottom: 0;
+          padding-left: 0;
           ol {
-            font-size: 12px;
+            &.coils {
+              display: inline-block;
+              font-size: 12px;
+            }
           }
         }
       }
@@ -71,6 +111,7 @@
   }
 
   footer {
+    overflow-x: hidden;
     .contact-icons {
       .contain-icons {
         .social-icons1 {
@@ -96,6 +137,7 @@
   .last {
     .contain-line {
       .mr-4 {
+        margin-left: 1rem;
         font-size: 12px !important;
       }
     }
@@ -115,7 +157,7 @@
             outline: none;
             border: none;
             margin: 0 !important;
-            a {
+            a.dropdown-item {
               color: $primary;
               font-size: 12px;
               font-weight: 600;
@@ -153,7 +195,7 @@
     min-width: 100%;
     .container {
       .about-cards {
-        .card {
+        .card-native {
           flex: 0 0 100%;
           max-width: 100%;
         }
@@ -169,17 +211,17 @@
       .navbar-nav {
         .nav-item {
           .dropdown-menu {
-            background-color: $bg-color;
+            // background-color: $bg-color;
             min-width: 20rem;
             outline: none;
             border: none;
             margin: 0 !important;
-            a {
-              color: $primary;
+            a.dropdown-item {
+              // color: $primary;
               font-size: 12px;
               font-weight: 600;
-              float: right;
-              margin-right: 10px;
+              float: none;
+              margin-right: 0;
 
               &:hover {
                 background-color: $link-bg;
@@ -211,7 +253,7 @@
     max-width: 720px;
     .container {
       .about-cards {
-        .card {
+        .card-native {
           flex: 0 0 100%;
           width: 100%;
         }

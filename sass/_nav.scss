@@ -39,6 +39,19 @@ nav.navbar {
             color: $link-bg;
           }
         }
+        &.dropdown {
+          .dropdown-menu {
+            background-color: $primary;
+            a.dropdown-item {
+              font-size: 14px;
+              letter-spacing: 0;
+              font-weight: 500;
+              &:hover {
+                background-color: $link-bg;
+              }
+            }
+          }
+        }
       }
     }
   }
