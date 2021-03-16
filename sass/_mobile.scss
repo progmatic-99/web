@@ -10,7 +10,7 @@
       .navbar-nav {
         .nav-item {
           .dropdown-menu {
-            background-color: $bg-color;
+            background-color: $bg-color !important;
             min-width: 20rem;
             outline: none;
             border: none;
@@ -152,7 +152,7 @@
       .navbar-nav {
         .nav-item {
           .dropdown-menu {
-            background-color: $bg-color;
+            background-color: $bg-color !important;
             min-width: 20rem;
             outline: none;
             border: none;

@@ -469,7 +469,7 @@ footer {
   nav .navbar-collapse {
     margin-top: 1rem; }
     nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
-      background-color: #1c272b;
+      background-color: #1c272b !important;
       min-width: 20rem;
       outline: none;
       border: none;
@@ -546,7 +546,7 @@ footer {
   nav .navbar-collapse {
     margin-top: 1rem; }
     nav .navbar-collapse .navbar-nav .nav-item .dropdown-menu {
-      background-color: #1c272b;
+      background-color: #1c272b !important;
       min-width: 20rem;
       outline: none;
       border: none;
